@@ -1,3 +1,49 @@
 body{
-  background-color: green;
+  background-color:green;
+}
+
+.bank{
+  text-align: center;
+}
+
+.bank {
+  background-color: #F0F0F0;
+  margin: 40px 500px;
+  padding: 1px;
+  border-radius: 25px;
+  opacity: 0.85;
+}
+
+.players {
+  display: inline-flex;
+}
+
+.bet{
+  list-style-type: none;
+}
+.choice {
+  list-style-type: none;
+}
+
+.box-playerb{
+  text-align: right;
+  position: relative;
+  top: 200px;
+  left: 1075px ;
+}
+
+.box-playera{
+  position: relative;
+  left: 20px;
+  top : 200px;
+}
+
+#myCanvas {
+  position: relative;
+  left: 100px;
+}
+#deck{
+  position: relative;
+  bottom: 210px;
+  left: 1150px;
 }

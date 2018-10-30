@@ -4,7 +4,48 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../gameboard/style.css">
   <title>Project Black'Hack - Game Board</title>
+  <script src="./script.js"></script>
 </head>
 <body>
+  <section class="bank">
+    <h1>CASINO</h1>
+    <h2>Score</h2>
+  </section>
+  <img id="deck" src="../images/cartes/b1fv.png" alt="hidden card">
+  <canvas id="myCanvas" width="1200" height="160" style="border:1px solid #000000;"></canvas>
+  <section class="players">
+    <div class="box-playera">
+      <p id="playerAname"></p>
+      <p> Value of my hand : </p>
+      <p id="pointa"></p>
+      <ul class="bet">
+        <button ><li>Bet</li></button> <br>
+        <button><li>10</li></button> <br>
+        <button><li>25</li></button> <br>
+        <button><li>50</li></button> <br>
+        <button><li>100</li></button> <br>
+      </ul>
+      <ul class="choice">
+        <button type="button" onclick="addCard()"><li>Add Card</li></button>
+        <button type="button" onclick="rest()"><li>Rest</li></button>
+      </ul>
+    </div>
+    <div class="box-playerb">
+      <p id="playerBname"></p>
+      <p>Value of my hand : </p>
+      <p id="pointb"></p>
+    <ul class="bet">
+        <button><li>Bet</li></button> <br>
+        <button><li>10</li></button> <br>
+        <button><li>25</li></button> <br>
+        <button><li>50</li></button> <br>
+        <button><li>100</li></button> <br>
+      </ul>
+      <ul class="choice">
+        <button type="button" onclick="addCard()"><li>Add Card</li></button>
+        <button type="button" onclick="rest()"><li>Rest</li></button>
+      </ul>  
+    </div>
+  </section>
 </body>
 </html>
