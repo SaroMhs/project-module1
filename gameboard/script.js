@@ -75,7 +75,7 @@ document.getElementById("pointa").innerHTML = sumUpP;
 // --- le joueur clique sur "add card"
 $(function(){
   $ ('#addCard').click, function(){
-    playerA.addCard();
+    giveCard();
   }
 });
 // -------- fonction qui lui distribue une carte en plus
