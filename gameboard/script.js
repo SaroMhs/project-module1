@@ -4,18 +4,6 @@
 //document.getElementById ("playera").innerHTML = "playerAname";
 //document.getElementById ("playerb").innerHTML = "playerBname";
 // ------- définir les joueurs 
-function player (cards, chips, totalBet, points) {
-  this.cards = cards;
-  this.chips = chips;
-  this.totalBet = totalBet;
-  this.points = points;
-}
-
-var player = new player ([], 100, 5, 0)
-// --- fonction qui donne deux cartes à chaque joueur
-
-// ------- définisse le deck de cartes 
-// ------- définisse les cartes
 function card (value, ranks, suits) {
   this.value = value;
   this.ranks = ranks;
@@ -29,22 +17,29 @@ function card (value, ranks, suits) {
 
 function deckOfCard () {
 
-  for (var s = 0; s < this.suits.length; s++) {
-    for (var r = 0; r < this.ranks.length; r++) {
-      if (r > 9 ) {
-      deck.push(new card(10, this.ranks[r], this.suits[s]));
-      } else if (this.ranks[r]==="A"){
-        deck.push(new card(11, this.ranks[r], this.suits[s]));
-      }
-      else deck.push(new card(r+1, this.ranks[r], this.suits[s]));
-    }
-  }
-
-
-  return deck;
+ for (var s = 0; s < this.suits.length; s++) {
+   for (var r = 0; r < this.ranks.length; r++) {
+     if (r > 9 ) {
+     deck.push(this.ranks[r]+this.suits[s]);
+     } else if (this.ranks[r]==="A"){
+       deck.push(this.ranks[r]+this.suits[s]);
+     }
+     else deck.push(this.ranks[r]+this.suits[s]);
+   }
+ }
+ return deck;
 }
 
-deckOfCard()
+console.log (deckOfCard().length)
+
+var deckCard = deckOfCard()
+
+function giveCard (deckCard) {
+      var random = deck[Math.floor(Math.random() * deck.length)];
+      return random
+ };
+
+giveCard () 
 
 /*
 function deckOfCard () {
