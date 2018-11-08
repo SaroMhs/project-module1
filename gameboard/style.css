@@ -33,6 +33,7 @@ body{
 }
 
 .box-playera{
+  border: red solid 3px;
   position: relative;
   left: 20px;
   top : 200px;
@@ -47,3 +48,4 @@ body{
   bottom: 210px;
   left: 1150px;
 }
+

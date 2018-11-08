@@ -4,19 +4,20 @@
 //document.getElementById ("playera").innerHTML = "playerAname";
 //document.getElementById ("playerb").innerHTML = "playerBname";
 // ------- définir les joueurs 
-function card (value, ranks, suits) {
-  this.value = value;
+
+
+function card (ranks, suits) {
   this.ranks = ranks;
   this.suits = suits;
 };
 
-  var ranks = ["A", "2", "3","4","5","6","7","8","9","J","Q","K"];
+  var ranks = [1,2,3,4,5,6,7,8,9,10];
   var suits = [ "hearts", "diams", "clubs", "spades" ];
-  var value = [];
   var deck = [];
+  var randomCard;
+  var value;
 
 function deckOfCard () {
-
  for (var s = 0; s < this.suits.length; s++) {
    for (var r = 0; r < this.ranks.length; r++) {
      if (r > 9 ) {
@@ -30,16 +31,39 @@ function deckOfCard () {
  return deck;
 }
 
-console.log (deckOfCard().length)
+deckOfCard();
 
-var deckCard = deckOfCard()
+console.log ("this is the deckofcard length" + deck.length)
 
-function giveCard (deckCard) {
-      var random = deck[Math.floor(Math.random() * deck.length)];
-      return random
+// var deckCard = deckOfCard()
+
+function giveCard() {
+      return randomCard = deck[Math.floor(Math.random() * deck.length)];
  };
 
-giveCard () 
+giveCard();
+
+console.log("ma carte au hasard est : " + randomCard);
+
+
+var myFunc = function () {
+  if (randomCard.charAt(1) == 0){
+    return value=10
+  } else {
+    return value=randomCard.charAt(0)
+  }
+};
+
+myFunc();
+console.log(value);
+
+function drawCard (){
+  //$('.box-playera').append('<div class="card-holder">'+'<img src="../images/cartes/'+ randomCard +'.png"></span></div>');
+  $(".box-playera").append("test");
+};
+
+
+// console.log (nameCard)
 
 /*
 function deckOfCard () {
@@ -70,19 +94,6 @@ giveCard ()
 */
 
 // les cartes sont mélangés et distribués
-function giveCard () {
-  if( deck.length > 0 ) {
-      var random = Math.floor( Math.random() * deck.length );
-      card = deck.splice( random, 1 )[0];
-    }
-  var cardLength = card.length;
-  for (var c = 0; c < cardLength; c++) {
-      var xy = card[c].length;
-     game.load.image(card[c].substring(0,xy-4),"../images/cartes/"+card[c]);
- }
-};
-
-giveCard ()
 
        
 /*
