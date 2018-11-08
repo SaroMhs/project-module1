@@ -46,6 +46,34 @@ function deckOfCard () {
 
 deckOfCard()
 
+/*
+function deckOfCard () {
+
+ for (var s = 0; s < this.suits.length; s++) {
+   for (var r = 0; r < this.ranks.length; r++) {
+     if (r > 9 ) {
+     deck.push(this.ranks[r]+this.suits[s]);
+     } else if (this.ranks[r]==="A"){
+       deck.push(this.ranks[r]+this.suits[s]);
+     }
+     else deck.push(this.ranks[r]+this.suits[s]);
+   }
+ }
+ return deck;
+}
+
+console.log (deckOfCard().length)
+
+var deckCard = deckOfCard()
+
+function giveCard (deckCard) {
+      var random = Math.floor( Math.random() * deckCard.length);
+      return random
+ };
+
+giveCard () 
+*/
+
 // les cartes sont mélangés et distribués
 function giveCard () {
   if( deck.length > 0 ) {
