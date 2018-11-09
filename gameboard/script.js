@@ -6,26 +6,25 @@
 // ------- définir les joueurs 
 
 
+var ranks = [1,2,3,4,5,6,7,8,9];
+var suits = [ "hearts", "diams", "clubs", "spades" ];
+var deck = [];
+var randomCard;
+var dealerpoints = [];
+var playerpoints = [];
+var sum = [];
+var value;
+var cardpull;
+var playercards=[];
+var dealercards=[];
+var score;
+
 
 
 function card (ranks, suits) {
   this.ranks = ranks;
   this.suits = suits;
 };
-
-  var ranks = [1,2,3,4,5,6,7,8,9];
-  var suits = [ "hearts", "diams", "clubs", "spades" ];
-  var deck = [];
-  var randomCard;
-  var dealerpoints = [];
-  var playerpoints = [];
-  var sum = [];
-  var value;
-  var cardpull;
-  var playercards;
-  var dealercards=[];
-  var score;
-
 
 // This is the deck of Card, there are 40 cards. 
 function deckOfCard () {
@@ -68,17 +67,18 @@ console.log("this is value : "+value);
 
 // this function add each card to the dealer or player deck
 
-function pullcard(playernum){
-  if (playernum===0){ 
-    dealercards.push(randomCard);
-  } else {
-    playercards.push(randomCard);
+//ATTENTION ICI LA FUNCTION NOUS SORT UNE SEULE ET MEME CARTE
+
+function pullcard(){
+  for (var c=0; c<deck.length; c++){
+    g
   }
+    dealercards.push(randomCard);
 };
 
-pullcard(0);
+console.log("this is dealercards "+dealercards);
+console.log("this is playercard : "+playercards)
 
-console.log("this is dealercards "+dealercards)
 
 //this function sum up the value
 function calcsore(){
@@ -97,18 +97,20 @@ calcsore();
 console.log("this is score : "+score);
 
 //this is the hand of the dealer
-function dealerplay(){
-  while (calcsore(dealercards)<17){
-    dealercards.push(" + "+randomCard);
-  } return dealercards;
+function play(){
+  if (score<17){
+    pullcard(0);
+  }
+  return dealercards
 };
-dealerplay();
 
-console.log("this is dealerplay() : "+dealerplay());
+play();
+
+console.log("this is dealerplay() : "+play());
 console.log("this is dealercard : "+dealercards);
 
 
-
+/*
 // console.log (nameCard)
 
 /*
