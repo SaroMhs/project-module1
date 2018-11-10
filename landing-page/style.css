@@ -2,7 +2,7 @@
 */
 
 body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   /*background-color: green;*/
   background-image: url(../images/landing-page.jpg);
   background-repeat: no-repeat;

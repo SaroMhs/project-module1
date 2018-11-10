@@ -1,13 +1,14 @@
 body{
-  background-color:rgb(56, 105, 56);
-  font-family: Verdana, Geneva, Tahoma, sans-serif
+  background-image: url('./gameboard-image.jpg');
+  background-size: cover;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .box{
-  border: red solid 3px;
   text-align: center;
   position: relative;
   top:200px;
+  left: 300px;
 
 }
 .choice {
@@ -20,6 +21,12 @@ body{
 button{
   padding: 10px;
   border-radius: 15%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+p{
+  color: white;
 }
 /*
 

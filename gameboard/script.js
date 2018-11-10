@@ -9,15 +9,12 @@ var ranks = ["1","2","3","4","5","6","7","8","9"];
 var suits = [ "hearts", "diams", "clubs", "spades" ];
 var deck = [];
 var randomCard;
-var dealerpoints = [];
-var playerpoints = [];
-var sum = [];
 var value;
-var cardpull;
 var playercards=[];
 var dealercards=[];
 var totalvalue=[];
 var score=[];
+var num=[];
 
 function card (ranks, suits) {
   this.ranks = ranks;
@@ -42,10 +39,10 @@ function deckOfCard () {
 deckOfCard();
 
 console.log("this is the deck : " + deck)
-//console.log("this is the deckOfCard : " + deckOfCard());
-console.log("this is dealercards "+dealercards);
+//console.log("this is dealercards "+dealercards);
 
 // this function give us random card 
+
 function randCard() {
   randomCard = deck[Math.floor(Math.random() * deck.length)];
   value=randomCard.charAt(0);
@@ -54,44 +51,54 @@ function randCard() {
 };
 
   randCard();
-  randCard();
+  randCard(); 
 
-  function makeStrings() {
-    return dealercards.toString();}; 
 
-  $(document).ready(function(){
-    $("#card").append(makeStrings())
-    $("#btn1").click(function(){
-        $("#card").append(", randomCard");
-    });
-  
-    $("#btn2").click(function(){
-        $("ol").append("test ");
-    });
-  });
-  
-  
-// var n = Number(totalvalue);
-// console.log(n)
-
-//console.log("this is randCard(): " +randCard());
 console.log("this is randomCard : "+randomCard);
 console.log("this is dealercards "+dealercards);
-
-//console.log("this is valueCard(): "+valueCard());
 console.log("this is value : "+value);
+console.log("this is total value without reduce : "+totalvalue);
 
-//console.log("this is calcsore : "+calcsore());
-console.log("this is total value : "+totalvalue);
+ function makeStrings() {
+    return dealercards.toString();}; 
+
+const reducer = (accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue);
+
+//console.log(totalvalue.reduce(reducer));
+
+var total= totalvalue.reduce(reducer);
+console.log("this is total with reduce "+total)
 /*
-const reducer = (accumulator, currentValue) => accumulator + currentValue;
+function addCard(){
+  randCard();
+  if (total>21){
+    alert("you lost !");
+  } else if (total<21) {
+    randCard()
+  }
+  return total
+};
 
-// 1 + 2 + 3 + 4
-console.log(totalvalue.reduce(reducer));
-// expected output: 10
+addCard();
+*/
+
+console.log("this is total avec add " +total)
+console.log("this is dealercards "+dealercards);
+
+$(document).ready(function(){
+  $("#card").append(makeStrings())
+  $("#value").append(total);
+  $("#btn1").click(function(){
+      $("#card").append("")
+  });  
+  $("#btn2").click(function(){
+      $("#card").append(stand());
+  });
+});
 
 
 /*
+
 function test(){
   for (var x=0; x<totalvalue.length; x++){
     return sum += totalvalue;
