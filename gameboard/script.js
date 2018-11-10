@@ -89,13 +89,14 @@ $(document).ready(function(){
   $("#card").append(makeStrings())
   $("#value").append(total);
   $("#btn1").click(function(){
-      $("#card").append("")
+      $("#test").toggle();
   });  
   $("#btn2").click(function(){
-      $("#card").append(stand());
+      $("#test").toggle();
   });
 });
 
+var test = "... Sorry I didn't code it yet :(";
 
 /*
 
