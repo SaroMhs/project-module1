@@ -4,21 +4,47 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../gameboard/style.css">
   <title>Project Black'Hack - Game Board</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./script.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+  
 </head>
-<body>
-  <section class="bank">
-    <h1>CASINO</h1>
-    <h2>Score</h2>
+<body >
+ <!-- <img id="deck" src="../images/cartes/b1fv.png" alt="hidden card">--> 
+  <section class="player">
+    <div class="box">
+      <p> MY CARDS : </p>
+      <p id="card"></p>
+      <p> VALUE OF MY CARDS : </p>
+      <p id="value"></p> <br>
+      <ul class="choice"> 
+        <button type="button" id="btn1"><li>Add Card</li></button>
+        <button type="button" id="btn2"><li>Rest</li></button>
+      </ul>
+    </div>
   </section>
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../gameboard/style.css">
+  <title>Project Black'Hack - Game Board</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
+  
+</head>
+<body >
   <img id="deck" src="../images/cartes/b1fv.png" alt="hidden card">
   <canvas id="myCanvas" width="1200" height="160" style="border:1px solid #000000;"></canvas>
   <section class="players">
     <div class="box-playera">
-      <p id="playerAname"></p>
-      <p> Value of my hand : </p>
-      <p id="pointa"></p>
+      <p> My Cards : </p>
+      <p id="card"></p>
+      <p> Value of my cards : </p>
+      <p id="value"></p>
       <ul class="bet">
         <button ><li>Bet</li></button> <br>
         <button><li>10</li></button> <br>
@@ -26,15 +52,15 @@
         <button><li>50</li></button> <br>
         <button><li>100</li></button> <br>
       </ul>
-      <ul class="choice">
-        <button type="button" onclick="addCard()"><li>Add Card</li></button>
-        <button type="button" onclick="rest()"><li>Rest</li></button>
+      <ul class="choice"> 
+        <button type="button" id="btn1"><li>Add Card</li></button>
+        <button type="button" id="btn2"><li>Rest</li></button>
       </ul>
     </div>
     <div class="box-playerb">
       <p id="playerBname"></p>
       <p>Value of my hand : </p>
-      <p  id="pointb"></p>
+      <p></p>
     <ul class="bet">
         <button><li>Bet</li></button> <br>
         <button><li>10</li></button> <br>
@@ -49,4 +75,4 @@
     </div>
   </section>
 </body>
-</html>
+</html> -->

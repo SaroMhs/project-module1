@@ -1,6 +1,27 @@
 body{
-  background-color:green;
+  background-color:rgb(56, 105, 56);
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 }
+
+.box{
+  border: red solid 3px;
+  text-align: center;
+  position: relative;
+  top:200px;
+
+}
+.choice {
+  list-style-type: none;
+  text-align: center;
+  position: relative;
+  right: 30px;
+}
+
+button{
+  padding: 10px;
+  border-radius: 15%;
+}
+/*
 
 .bank{
   text-align: center;
@@ -14,16 +35,11 @@ body{
   opacity: 0.85;
 }
 
-.players {
-  display: inline-flex;
-}
 
 .bet{
   list-style-type: none;
 }
-.choice {
-  list-style-type: none;
-}
+
 
 .box-playerb{
   text-align: right;
@@ -32,12 +48,7 @@ body{
   left: 1075px ;
 }
 
-.box-playera{
-  border: red solid 3px;
-  position: relative;
-  left: 20px;
-  top : 200px;
-}
+
 
 #myCanvas {
   position: relative;
@@ -48,4 +59,4 @@ body{
   bottom: 210px;
   left: 1150px;
 }
-
+*/

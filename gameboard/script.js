@@ -5,8 +5,7 @@
 //document.getElementById ("playerb").innerHTML = "playerBname";
 // ------- définir les joueurs 
 
-
-var ranks = [1,2,3,4,5,6,7,8,9];
+var ranks = ["1","2","3","4","5","6","7","8","9"];
 var suits = [ "hearts", "diams", "clubs", "spades" ];
 var deck = [];
 var randomCard;
@@ -17,9 +16,8 @@ var value;
 var cardpull;
 var playercards=[];
 var dealercards=[];
-var score;
-
-
+var totalvalue=[];
+var score=[];
 
 function card (ranks, suits) {
   this.ranks = ranks;
@@ -31,11 +29,11 @@ function deckOfCard () {
  for (var s = 0; s < this.suits.length; s++) {
    for (var r = 0; r < this.ranks.length; r++) {
      if (r > 9 ) {
-     deck.push(this.ranks[r]+this.suits[s]);
+     deck.push(this.ranks[r]+" of "+this.suits[s]+" ");
      } else if (this.ranks[r]==="A"){
-       deck.push(this.ranks[r]+this.suits[s]);
+       deck.push(this.ranks[r]+" of "+this.suits[s]+" ");
      }
-     else deck.push(this.ranks[r]+this.suits[s]);
+     else deck.push(this.ranks[r]+" of "+this.suits[s]+" ");
    }
  }
  return deck;
@@ -45,70 +43,89 @@ deckOfCard();
 
 console.log("this is the deck : " + deck)
 //console.log("this is the deckOfCard : " + deckOfCard());
+console.log("this is dealercards "+dealercards);
 
 // this function give us random card 
 function randCard() {
-      return randomCard = deck[Math.floor(Math.random() * deck.length)];
- };
-randCard();
+  randomCard = deck[Math.floor(Math.random() * deck.length)];
+  value=randomCard.charAt(0);
+  dealercards.push(randomCard);
+  return totalvalue.push(value);
+};
+
+  randCard();
+  randCard();
+
+  function makeStrings() {
+    return dealercards.toString();}; 
+
+  $(document).ready(function(){
+    $("#card").append(makeStrings())
+    $("#btn1").click(function(){
+        $("#card").append(", randomCard");
+    });
+  
+    $("#btn2").click(function(){
+        $("ol").append("test ");
+    });
+  });
+  
+  
+// var n = Number(totalvalue);
+// console.log(n)
 
 //console.log("this is randCard(): " +randCard());
 console.log("this is randomCard : "+randomCard);
-
-// this function give us the value of each random card given
-function valueCard() {
-    return value=randomCard.charAt(0);
-};
-
-valueCard();
+console.log("this is dealercards "+dealercards);
 
 //console.log("this is valueCard(): "+valueCard());
 console.log("this is value : "+value);
 
-// this function add each card to the dealer or player deck
+//console.log("this is calcsore : "+calcsore());
+console.log("this is total value : "+totalvalue);
+/*
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
 
-//ATTENTION ICI LA FUNCTION NOUS SORT UNE SEULE ET MEME CARTE
+// 1 + 2 + 3 + 4
+console.log(totalvalue.reduce(reducer));
+// expected output: 10
 
-function pullcard(){
-  for (var c=0; c<deck.length; c++){
-    g
+
+/*
+function test(){
+  for (var x=0; x<totalvalue.length; x++){
+    return sum += totalvalue;
   }
-    dealercards.push(randomCard);
 };
+test()
 
-console.log("this is dealercards "+dealercards);
-console.log("this is playercard : "+playercards)
-
-
+console.log(totalvalue);
+/*
 //this function sum up the value
 function calcsore(){
   score=0;
   for (i=0; i<value.length; i++){
-    if (value[i]>=10){
-      score+=10;
-    } else {
-      score+=value[i]; 
-    };
+    score = value;
   } return score;
 };
 calcsore();
 
-//console.log("this is calcsore : "+calcsore());
-console.log("this is score : "+score);
 
-//this is the hand of the dealer
 function play(){
-  if (score<17){
-    pullcard(0);
-  }
-  return dealercards
-};
+    if (score<17){
+        randCard();
+    }
+      return dealercards
+    };
+   play();
 
-play();
-
+console.log("this is dealercards "+dealercards);
+//console.log("this is playercard : "+playercards)
 console.log("this is dealerplay() : "+play());
 console.log("this is dealercard : "+dealercards);
 
+// pullcard();
+// console.log(dealercards)
 
 /*
 // console.log (nameCard)
